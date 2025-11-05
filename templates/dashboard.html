@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Übersicht · Codex Hotspot{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>Willkommen, {{ user }}!</h2>
+  <p>Du bist erfolgreich angemeldet. Verwende den folgenden Button, um dich wieder abzumelden.</p>
+  <form action="{{ url_for('logout') }}" method="get">
+    <button type="submit">Abmelden</button>
+  </form>
+</section>
+{% endblock %}
